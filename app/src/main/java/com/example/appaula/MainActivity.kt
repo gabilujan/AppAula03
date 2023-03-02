@@ -12,9 +12,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val edtNome:EditText = findViewById(R.id.edtNome)
+        val edtEnde:EditText = findViewById(R.id.edtEnde)
+        val edtBairro:EditText = findViewById(R.id.edtBairro)
+        val edtCEP:EditText = findViewById(R.id.edtCEP)
+        val edtCidade:EditText = findViewById(R.id.edtCidade)
+        val edtEstado:EditText = findViewById(R.id.edtEstado)
         val btnCadastrar:Button = findViewById(R.id.btnCadastrar)
         btnCadastrar.setOnClickListener{
-            val toast = Toast.makeText(this, edtNome.text,Toast.LENGTH_SHORT)
+            val texto:String = edtNome.text.toString() + edtEnde.text.toString() + edtBairro.text.toString() + edtCEP.text.toString()+ edtCidade.text.toString() + edtEstado.text.toString()
+            val toast = Toast.makeText(this, texto,Toast.LENGTH_SHORT)
             toast.show()
         }
     }
